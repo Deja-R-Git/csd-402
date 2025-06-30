@@ -2,52 +2,55 @@
 // This program creates the Fan class with private fields, Booleans and instances to display functionality of the class
 
 //packages that help with making a collection with arrays
-package FansAssignment;
+
 import java.util.List;
 import java.util.ArrayList;
 
 public class Fan {
-//constants
+	//constants
 	public static final int STOPPED = 0;
 	public static final int SLOW = 1;
 	public static final int MEDIUM = 2;
 	public static final int FAST = 3;
 
 //fields
-	
+
 	private boolean fanIsOn = true;
 	private String speed = STOPPED;
 	private int radius = 6;
 	public String color = white;
-	
-//no argument constructor
-	public Fan(){
-		
+
+	//no argument constructor
+	public Fan() {
+
 	}
 
-//argument constructor gives Fan information
-	public Fan(){
+	//argument constructor gives Fan information
+	public Fan() {
 		this.fanIsOn = fanIsOn;
 		this.speed = speed;
 		this.radius = radius;
 		this.color = color;
-}
+	}
 
-//setters
-	public void setFanIsOn(){
+	//setters
+	public void setFanIsOn() {
 		this.fanIsOn = fanIsOn;
-}
-	public void setSpeed(){
-		this.speed = speed;
-}
-	public void setRadius(){
-		this.radius = radius;
-}
-	public void setColor(){
-		this.color = color;
-}
+	}
 
-//getters
+	public void setSpeed() {
+		this.speed = speed;
+	}
+
+	public void setRadius() {
+		this.radius = radius;
+	}
+
+	public void setColor() {
+		this.color = color;
+	}
+
+	//getters
 	public boolean getfanIsOn() {
 		return fanIsOn;
 	}
@@ -59,11 +62,11 @@ public class Fan {
 	public int getRadius() {
 		return radius;
 	}
-	
-	public String getColor(){
+
+	public String getColor() {
 		return color;
 	}
-	
+
 
 
 	public class UseFans{
@@ -77,23 +80,13 @@ public class Fan {
 		System.out.println("Color:" + fan.color());
 
 	}
-
 //loop through collection and print each fan
 	public void displayCollection(List <Fan> fans){
 		for(Fan fan:fans) {
 			displayFan(fan);
+		}
 	}
-}
 
-//creates the collection of fan instances(objects) with arraylist
-	public static void main(String[] args) {
-		List<Fan> fanList = new ArrayList<>();
-		fansList.add(new fan(true, Fan.MEDIUM, 4, "blue"));
-		fansList.add(new fan(true, Fan.SLOW, 8, "red"));
-		fansList.add(new fan(false, Fan.FAST, 3, "purple"));
-		
-//shows full arraylist of fans and their values
-		displayFan(fanList);
 
 
 //Test code that will create fan objects and use the methods//
@@ -108,7 +101,7 @@ public class Fan {
 		fan1.setColor("blue");
 
 //print out and display attributes with getters
-		System.out.println(Fan1 New Attributes:);
+		System.out.println("Fan1 New Attributes:");
 		System.out.println("Is the fan on?:" + fan1.getfanIsOn());
 		System.out.println("Speed:" + fan1.getSpeed());
 		System.out.println("Radius:" + fan1.getRadius());
@@ -123,7 +116,7 @@ public class Fan {
 //giving fan3 initial values with argument constructor
 		fan fan3 = new fan(true, fan.SLOW, 3, "purple");
 
-		System.out.println(Fan3 New Attributes:);
+		System.out.println("Fan3 New Attributes:");
 		System.out.println("Is the fan on?:" + fan3.getfanIsOn());
 		System.out.println("Speed:" + fan3.getSpeed());
 		System.out.println("Radius:" + fan3.getRadius());
